@@ -17,9 +17,9 @@ describe('Calcoli totale', () => {
         expect(totaleOrdine(totaleImponibil() + totaleIva() ).toBe(174));
     };
 
-    // it('calcolare costo totale', () => {
-    //     expect(totaleGenerale(totaleOrdine() + costoSpedizione)).toBe(174));
-    // };
+    it('calcolare costo totale', () => {
+        expect(totaleGenerale(totaleOrdine() + costoSpedizione)).toBe(174));
+    };
     
 });
 
