@@ -11,7 +11,7 @@ export const carrello: ProdottoCarrello[] = [
     {id: 3, nome: 'libro', prezzo: 2.5, quantita: 2}
 ];
 
-export const totaleImponibile = (carrello) => {
+export const totaleImponibile = (carrello: ProdottoCarrello[]) => {
     let totale = 0;
     for (let i = 0; i < carrello.length; i++) {
         totale += carrello[i].prezzo * carrello[i].quantita;
@@ -19,17 +19,17 @@ export const totaleImponibile = (carrello) => {
     return totale;
 }
 
-export const totaleIva = (carrello) => {
+export const totaleIva = (carrello: ProdottoCarrello[]) => {
     return totaleImponibile(carrello) * 0.2;
 }
 
-export const totaleOrdine = (totaleImponibile, totaleIva) => {
+export const totaleOrdine = (totaleImponibile: number, totaleIva: number) => {
     return totaleImponibile + totaleIva;
 }
 
 export const costoSpedizione = 10;
 
-export const totaleGenerale = (totaleOrdine, costoSpedizione) => {
+export const totaleGenerale = (totaleOrdine: number, costoSpedizione: number) => {
     return totaleOrdine + costoSpedizione;
 }
 
